@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board de Artigos</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Board de Artigos</h1>
+    </header>
+
+    <section class="board__component--mobile">
+        <div class="container">
+            <p>Possíveis alternativas para a versão mobile: pode ser uma lista de artigos destacados, um carrossel de cards, ou um grid de três cards.</p>
+        </div>
+    </section>
+
+    <section class="board__component--desktop">
+        <div class="container">
+            <div class="board__wrapper">
+                <div class="overlay">
+                    <img src="assets/img/01.jpg" alt="" id="js--board-background">
+                </div>
+                <div class="links__wrapper">
+                    <a href="#" class="article__card" data-cover="assets/img/02.jpg">
+                        <p>An In-Depth Guide to CSS Selectors and Their Practical Applications</p>
+                    </a>
+                    <a href="#" class="article__card" data-cover="assets/img/03.jpg">
+                        <p>Exploring CSS Animation: Techniques for Enhancing User Experience</p>
+                    </a>
+                    <a href="#" class="article__card" data-cover="assets/img/04.jpg">
+                        <p>The Power of CSS Grid: Simplifying Complex Layouts</p>
+                    </a>
+                    <a href="#" class="article__card" data-cover="assets/img/05.jpg">
+                        <p>Building Responsive Websites with CSS Media Queries</p>
+                    </a>
+                    <a href="#" class="article__card" data-cover="assets/img/06.jpg">
+                        <p>CSS Best Practices: Optimizing Code for Performance and Maintainability</p>
+                    </a>
+                    <a href="#" class="article__card" data-cover="assets/img/01.jpg">
+                        <p>Mastering CSS Transitions: Adding Smooth Effects to Web Elements</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container--code__explained">
+        <h2>O Código</h2>
+        <p>Feito para uma visualização de 992px ou maior.</p>
+        <p>Há uma layer com uma imagem inicial fixa. Cada link carrega um atributo customizado data-cover com o caminho de sua imagem, que no evento mouseover substitui o src da imagem inicial.</p>
+    </section>
+
+    <footer>
+        <p>2023. Leo Thomas Monteiro.</p>
+        <p>LDNA S/A</p>
+    </footer>
+
+    <script src="assets/js/board.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+section div {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section div img {
+  max-width: 100%;
+}
+section div.__1,
+section div.__3,
+section div.__6,
+section div.__9 {
+  background-color: #ff5151;
+}
+section div.__2,
+section div.__5,
+section div.__7 {
+  background-color: #476cff;
+}
+section div.__4,
+section div.__8 {
+  background-color: #ffff7c;
+}
+section .frame {
+  width: 630px;
+  display: flex;
+  gap: 60px;
+}

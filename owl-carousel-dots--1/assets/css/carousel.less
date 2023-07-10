@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;700&display=swap');
+ 
+body {
+    background: whitesmoke;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: 'Saira', sans-serif;
+    h1 {
+        font: 900 32px 'Saira', sans-serif;
+        text-align: center;
+    }
+    p {
+        margin: 0;
+        font: 400 16px 'Saira', sans-serif;
+        text-align: center;
+    }
+}
+
+.container1200 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 260px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: rgb(36, 72, 60);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+    @media screen and (min-width: 768px) {
+        width: 600px;
+    }
+}
+
+.owl-carousel.owl-theme.cards__carousel {
+    .owl-item {
+        display: flex;
+        justify-content: center;
+    }
+    .owl-dots {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        .owl-dot {
+            height: 10px !important;
+            display: flex;
+            align-items: center;
+            span {
+                margin: 0;
+                width: 5px;
+                height: 5px;
+                background-color: #11357a;
+                transition: all linear .25s;
+            }
+            &.active {
+                span {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+        &.disabled {
+            display: none;
+        }
+    }
+}
+

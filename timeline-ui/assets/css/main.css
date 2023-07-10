@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7wTCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA71rCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA773Fosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7_PFosg.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Saira', sans-serif;
+}
+body h1,
+body p {
+  margin: 0;
+}
+body .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+}
+body footer {
+  padding: 30px;
+}
+body footer p {
+  font: 400 16px 'Saira', sans-serif;
+  text-align: center;
+}
+body footer .buy_me_a_coffee {
+  margin-top: 20px;
+}
+body footer .buy_me_a_coffee a {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all linear 0.15s;
+}
+body footer .buy_me_a_coffee a .profile {
+  width: 46px;
+  transition: all linear 0.15s;
+}
+body footer .buy_me_a_coffee a .coffee {
+  width: 160px;
+  display: flex;
+  transition: all linear 0.15s;
+}
+body footer .buy_me_a_coffee a .coffee .triangle {
+  margin-right: -2px;
+}
+body footer .buy_me_a_coffee a .coffee .button {
+  width: 100%;
+}
+body footer .buy_me_a_coffee a:hover .coffee {
+  transform: scale(1.1);
+}
+body footer .buy_me_a_coffee a:hover .profile {
+  transform: rotate(-10deg);
+}
+.timeline__header {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.timeline__header .title {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font: 300 22px 'Saira', sans-serif;
+  color: #121212;
+}
+.timeline__header .headline {
+  font: 700 36px/34px 'Saira', sans-serif;
+  margin-bottom: 20px;
+  color: #121212;
+}
+.timeline__header .headline span {
+  color: #b8289b;
+}
+.timeline__header .text {
+  font: 400 16px 'Saira', sans-serif;
+  color: #383838;
+}
+.timeline__wrapper .timeline__point {
+  position: relative;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.timeline__wrapper .timeline__point .box {
+  width: 36px;
+  height: 36px;
+  background-color: #FFC0CB;
+}
+.timeline__wrapper .timeline__point .date {
+  font: 700 22px 'Saira', sans-serif;
+}
+.timeline__wrapper .timeline__point .mobile__text {
+  text-align: center;
+  font: 300 14px/22px 'Saira', sans-serif;
+}
+.timeline__wrapper .timeline__point::after {
+  content: "";
+  background-color: lightgray;
+  position: absolute;
+  bottom: -53px;
+  left: calc(50% - 1px);
+  height: 48px;
+  width: 2px;
+}
+@media screen and (min-width: 1200px) {
+  .timeline__wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .timeline__wrapper .timeline__point .mobile__text {
+    display: none;
+  }
+  .timeline__wrapper .timeline__point::after {
+    display: none;
+  }
+  .timeline__wrapper::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 18px;
+    left: -40px;
+    width: calc(100% + 40px);
+    height: 2px;
+    background-color: lightgray;
+  }
+}

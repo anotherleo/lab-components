@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;700&display=swap');
+ 
+body {
+    background-image: linear-gradient(lightblue, pink);
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    h1 {
+        font: 900 32px 'Saira', sans-serif;
+    }
+    p {
+        margin: 0;
+        font: 400 16px 'Saira', sans-serif;
+        text-align: center;
+    }
+}
+
+.button__play {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+    transition: all linear .15s;
+
+    svg {
+        width: 46px;
+        height: 46px;
+        transition: all linear .15s;
+        fill: black;
+    }
+
+    .overlay {
+        opacity: 0;
+        z-index: -2;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        width: 40px;
+        height: 40px;
+        background-image: linear-gradient(blue, fuchsia);
+        border-radius: 50%;
+        transition: all linear .15s;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        svg {
+            fill: white;
+        }
+
+        .overlay {
+            opacity: 1;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+        }
+    }
+}

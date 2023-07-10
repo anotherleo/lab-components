@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LT | Cart UI</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cart UI</h1>
+    </header>
+
+    <div class="cart__header">
+        <a href="#" class="button__cart">
+            <img src="assets/img/icon-cart.svg" alt="Carrinho">
+            <span class="cart__numbers">0</span>
+        </a>
+    </div>
+
+    <div class="cart__grid">
+        <div class="cart__product">
+            <a href="#" class="cover__wrapper">
+                <span class="tag">3</span>
+                <img src="assets/img/product-3.jpg" alt="produto" class="cover">
+                <div class="title__desktop">
+                    Chrono Red
+                </div>
+            </a>
+            <div class="title__mobile">
+                Chrono Red
+            </div>
+            <div class="product__controls">
+                <input type="number" class="input__items" value="3">
+                <img src="assets/img/plus-circle.svg" alt="+" class="quantity__control button__add" role="button">
+                <img src="assets/img/minus-circle.svg" alt="-" class="quantity__control button__remove" role="button">
+                <img src="assets/img/trash.svg" alt="delete" class="button__delete" role="button">
+            </div>
+        </div>
+
+        <div class="cart__product">
+            <a href="#" class="cover__wrapper">
+                <span class="tag">3</span>
+                <img src="assets/img/product-1.jpg" alt="produto" class="cover">
+                <div class="title__desktop">
+                    Chrono Tech Black
+                </div>
+            </a>
+            <div class="title__mobile">
+                Chrono Tech Black
+            </div>
+            <div class="product__controls">
+                <input type="number" class="input__items" value="3">
+                <img src="assets/img/plus-circle.svg" alt="+" class="quantity__control button__add" role="button">
+                <img src="assets/img/minus-circle.svg" alt="-" class="quantity__control button__remove" role="button">
+                <img src="assets/img/trash.svg" alt="delete" class="button__delete" role="button">
+            </div>
+        </div>
+
+        <div class="cart__product">
+            <a href="#" class="cover__wrapper">
+                <span class="tag">3</span>
+                <img src="assets/img/product-2.jpg" alt="produto" class="cover">
+                <div class="title__desktop">
+                    Chrono Black Nebula
+                </div>
+            </a>
+            <div class="title__mobile">
+                Chrono Black Nebula
+            </div>
+            <div class="product__controls">
+                <input type="number" class="input__items" value="3">
+                <img src="assets/img/plus-circle.svg" alt="+" class="quantity__control button__add" role="button">
+                <img src="assets/img/minus-circle.svg" alt="-" class="quantity__control button__remove" role="button">
+                <img src="assets/img/trash.svg" alt="delete" class="button__delete" role="button">
+            </div>
+        </div>
+
+        <div class="cart__product">
+            <a href="#" class="cover__wrapper">
+                <span class="tag">3</span>
+                <img src="assets/img/product-4.jpg" alt="produto" class="cover">
+                <div class="title__desktop">
+                    Chrono Firestorm
+                </div>
+            </a>
+            <div class="title__mobile">
+                Chrono Firestorm
+            </div>
+            <div class="product__controls">
+                <input type="number" class="input__items" value="3">
+                <img src="assets/img/plus-circle.svg" alt="+" class="quantity__control button__add" role="button">
+                <img src="assets/img/minus-circle.svg" alt="-" class="quantity__control button__remove" role="button">
+                <img src="assets/img/trash.svg" alt="delete" class="button__delete" role="button">
+            </div>
+        </div>
+    </div>
+
+    <dialog id="delete-confirmation-dialog" class="dialog__delete">
+        <p>Are you sure you want to 
+        <br>delete this item from your cart?</p>
+        <div class="controls">
+            <button id="confirm-delete">Yes</button>
+            <button id="cancel-delete">No</button>
+        </div>
+        <img src="assets/img/icon-close.svg" alt="close" role="button" class="dialog__close">
+    </dialog>
+
+    <footer>
+        <p>2023. Leo Thomas Monteiro. Images of Daniel Korpai on Unsplash.</p>
+        <div class="buy_me_a_coffee">
+            <a href="https://www.buymeacoffee.com/leothomas">
+                <img src="assets/img/footer/profile.png" alt="Leo Thomas Monteiro" class="profile">
+                <div class="coffee">
+                    <img src="assets/img/footer/triangle.svg" alt="icon" class="triangle">
+                    <img src="assets/img/footer/bmc-black-button.png" alt="Buy me a coffee" class="button">
+                </div>
+            </a>
+        </div>
+    </footer>
+
+    <script src="assets/js/cart-ui.js"></script>
+</body>
+
+</html>

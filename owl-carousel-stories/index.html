@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/libs/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+
+    <link rel="stylesheet" href="assets/css/card.css">
+</head>
+
+<body>
+    <header>
+        <h1>Owl Carousel Stories</h1>
+    </header>
+
+    <section class="container1200">
+        <div class="carousel">
+            <div class="owl-carousel owl-theme stories__carousel">
+                <div class="item">
+                    <div class="card">
+                        <img src="assets/img/01.jpg" alt="">
+                        <p>#1</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="assets/img/02.jpg" alt="">
+                        <p>#2</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="assets/img/03.jpg" alt="">
+                        <p>#3</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="assets/img/04.jpg" alt="">
+                        <p>#4</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="assets/img/05.jpg" alt="">
+                        <p>#5</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <img src="assets/img/06.jpg" alt="">
+                        <p>#6</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="code">
+            <h2>O código</h2>
+            <p>Owl Carousel configurado com autoplay e autoplayTimeout de 2s.</p>
+            <p>Usei a lib Mutation Summary pra facilitar o uso da Mutation Observer API, e observei a mudança de classes nos dots. Customizei duas novas classes, .storie__past e .storie__next, para controlar os estilos. Usei uma operação simples de forEach e slice para ajustar as classes com base no item ativo, adicionei uma animação de 2s no item ativo, e ficou pronto o sorvetinho!</p>
+            <p>Ignorei o span que fica dentro do .owl-dot e formatei direto a classe owl-dots, brincando com flex e flex-grow para os dots preencherem todo o espaço.</p>
+            <p>Visual inspirado nos stories do Google Notícias da versão mobile.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>2023. Leo Thomas Monteiro.</p>
+        <p>LDNA S/A</p>
+    </footer>
+
+    <!-- * owl carousel controls -->
+    <script src="assets/libs/jquery-3.7.0.min.js"></script>
+    <script src="assets/libs/owl.carousel.min.js"></script>
+    <script src="assets/libs/mutation-summary.js"></script>
+    <script>
+        $('.stories__carousel').owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 2000,
+            loop: false,
+            nav: false,
+            dots: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 20,
+                }
+            }
+        });
+    </script>
+
+    <script>
+        function storiesDots() {
+            const owlDots = document.querySelectorAll('.owl-dot');
+
+            // Find the currentStorie with the class .active
+            const currentStorie = document.querySelector('.owl-dot.active');
+
+            if (currentStorie) {
+                // Find all the .owl-dot elements
+                // const allStories = Array.from(owlDots), but in ES6:
+                const allStories = [...owlDots];
+
+                // Find the index of the currentStorie element
+                const currentIndex = allStories.indexOf(currentStorie);
+
+                // Remove the nextStorie class from the currentStorie
+                currentStorie.classList.remove('storie__next');
+
+                // Add .storie__past class to the elements before the currentStorie
+                const pastStories = allStories.slice(0, currentIndex);
+                pastStories.forEach(storie => {
+                    storie.classList.add('storie__past');
+                    storie.classList.remove('storie__next');
+                });
+
+                // Add .storie__next class to the elements after the currentStorie
+                const nextStories = allStories.slice(currentIndex + 1);
+                nextStories.forEach(storie => {
+                    storie.classList.add('storie__next');
+                    storie.classList.remove('storie__past');
+                });
+            }
+        }
+
+        // Select the parent element that contains .owl-item elements
+        const parentElement = document.querySelector('.owl-dots');
+
+        // Create a new MutationSummary instance
+        const observer = new MutationSummary({
+            rootNode: parentElement,
+            callback: storiesDots,
+            queries: [{ attribute: 'class' }],
+        });
+
+        // Trigger initial
+        storiesDots();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Carousel Dots Nº1</title>
+    <link rel="stylesheet" href="assets/libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/libs/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+</head>
+<body>
+
+    <h1>Owl Carousel Dots Nº1</h1>
+
+    <section class="container1200">
+        <div class="owl-carousel owl-theme cards__carousel">
+            <div class="item">
+                <div class="card">
+                    Hack #1
+                    <br>Qualquer imagem dentro vai ser distorcida.
+                    <br>Usar img {width: fit-content;}.
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    Hack #2
+                    <br>Para aparecer efeito de sombra, colocar margin no elemento dentro de .item.
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    Hack #3
+                    <br>Para centralizar o .item na tela:
+                    <br>colocar display flex e justify-content center no .owl-item.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>2023. Leo Thomas Monteiro.</p>
+        <p>LDNA S/A</p>
+    </footer>
+
+    <!-- * owl carousel controls -->
+    <script src="assets/libs/jquery-3.7.0.min.js"></script>
+    <script src="assets/libs/owl.carousel.min.js"></script>
+    <script>
+        $('.cards__carousel').owlCarousel({
+            loop: false,
+            nav: false,
+            dots: true,
+            responsive:{
+                0: {
+                    items: 1,
+                    margin: 16,
+                }
+            }
+        });
+    </script>
+</body>
+</html>

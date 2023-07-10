@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/page.css">
+</head>
+<body>
+    
+    <section class="page__first">
+        <div class="container section__two-columns">
+            <img src="assets/img/ashish-kumar-senapati-wbS3ac5c88Q-unsplash.jpg" alt="" class="cover" id="first-cover">
+
+            <div class="contents">
+                <p class="tagline">Unveiling the Beauty of the Starlit Skies and Majestic Mountains</p>
+                <h2 class="title">Nature's Symphony: Embrace the Majestic Night</h2>
+                <div class="text">
+                    <p>Nature's Symphony celebrates the beauty of the natural world, fostering a deep connection with nature. Through our products and services, we bring the wonders of the outdoors closer to you, inspiring a profound appreciation for nature. Join us on this journey of exploration and rediscover the symphony of nature.</p>
+                    <p>We create meaningful connections between people and the natural world. With eco-friendly products and immersive events, we share the transformative power of nature. Embrace sustainability and let's embark on this adventure together towards a brighter future.</p>
+                </div>
+                <a href="#" class="button">Embark on an Astral Voyage</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="page__second">
+        <div class="container">
+            <img src="assets/img/malith-d-karunarathne-qIRJeKdieKA-unsplash.jpg" alt="" class="cover second-cover">
+
+            <div class="contents">
+                <h2 class="title">Radiant Horizons: Embrace the Beauty of Sunset</h2>
+                <p class="tagline">
+                    Bask in the Warmth of Nature's Farewell
+                </p>
+                <p class="text">Experience the mesmerizing spectacle of the setting sun as it paints the sky with a kaleidoscope of colors. Our website invites you to immerse yourself in the breathtaking beauty of the sunset, a moment when day gracefully bids farewell and night begins its gentle embrace. Feel the warmth of the golden hues and witness nature's artistry unfold before your eyes. Indulge in the tranquil serenade of the fading light, where the horizon becomes a canvas for dreams and reflections. Let the radiant horizons captivate your soul and inspire a sense of wonder in the tapestry of nature's eternal dance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page__second">
+        <div class="container">
+            <img src="assets/img/robert-lukeman-_RBcxo9AU-U-unsplash.jpg" alt="" class="cover second-cover">
+
+            <div class="contents">
+                <h2 class="title">Harmony Unveiled: Embracing the Splendors</h2>
+                <p class="tagline">
+                    Discover Serenity Amidst Nature's Masterpiece
+                </p>
+                <p class="text">Immerse yourself in the symphony of tranquility as you behold the captivating vista of a lush green field, adorned with majestic rocks, framed by an expansive sky, and embraced by majestic mountains. Our website invites you to embark on a journey of serenity and awe, where nature's masterpieces unfold at every turn. Traverse the vibrant meadows, breathe in the crisp mountain air, and let the harmony of this breathtaking landscape rejuvenate your spirit. Connect with the natural world, find solace in its embrace, and let the splendors of nature weave their magic into your soul. Embrace the beauty, experience the peace, and uncover the true essence of harmony in nature's abundant embrace.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page__second">
+        <div class="container">
+            <img src="assets/img/luca-bravo-VowIFDxogG4-unsplash.jpg" alt="" class="cover second-cover">
+
+            <div class="contents">
+                <h2 class="title">Nordic Serenity: Embrace the Majestic Beauty of Iceland</h2>
+                <p class="tagline">
+                    Where Tranquility Meets Adventure in Nature's Wonderland
+                </p>
+                <p class="text">Step into a world where rugged beauty meets serene tranquility. Our website invites you to immerse yourself in the mesmerizing landscapes of Iceland, where boats gently sway on crystal-clear waters, wooden houses blend seamlessly with nature, and towering Icelandic mountains paint a breathtaking backdrop. Discover a land of contrasts, where vibrant hues of blue and green harmonize with the raw power of nature. Whether you seek thrilling adventures or a peaceful retreat, Iceland offers it all. From exploring hidden fjords to witnessing the dance of the Northern Lights, let the magic of this Nordic wonderland captivate your senses. Unleash your wanderlust, embrace the majestic beauty, and embark on an unforgettable journey through Iceland's enchanting landscapes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page__footer">
+        <div class="container">
+            <p class="text">2023. Developed by Leo Thomas Monteiro. Fictional content created by ChatGPT. Images from Unsplash.</p>
+        </div>
+    </footer>
+
+    <script src="assets/libs/simpleParallax.js"></script>
+    <script>
+        const firstCover = document.getElementById('first-cover');
+        new simpleParallax(firstCover, {
+            orientation: 'down',
+            scale: 1.5,
+            delay: .9,
+            transition: 'cubic-bezier(0,0,0,1)'
+        });
+
+        const secondCovers = document.getElementsByClassName('second-cover');
+        new simpleParallax(secondCovers, {
+            orientation: 'right',
+            scale: 1.5,
+            overflow: true,
+            delay: .9,
+            transition: 'cubic-bezier(0,0,0,1)'
+        });
+
+    </script>
+</body>
+</html>

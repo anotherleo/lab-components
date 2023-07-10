@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7wTCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA71rCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA773Fosg.ttf) format('truetype');
+}
+body {
+  font-family: 'Saira', sans-serif;
+}
+body * {
+  box-sizing: border-box;
+}
+body header,
+body footer {
+  text-align: center;
+}
+body header {
+  margin-top: 30px;
+}
+body a {
+  text-decoration: none;
+}
+body h1,
+body p {
+  margin: 0;
+}
+.container {
+  max-width: 1000px;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.board__component--mobile {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 992px) {
+  .board__component--mobile {
+    display: none;
+  }
+}
+.board__component--desktop {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .board__component--desktop {
+    display: block;
+    padding: 40px 0;
+  }
+  .board__component--desktop .board__wrapper {
+    position: relative;
+  }
+  .board__component--desktop .board__wrapper .overlay {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    height: 450px;
+  }
+  .board__component--desktop .board__wrapper .overlay img {
+    width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+  }
+  .board__component--desktop .board__wrapper .overlay img.effect--fadeout {
+    opacity: 0.6;
+  }
+  .board__component--desktop .board__wrapper .overlay::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+  }
+  .board__component--desktop .board__wrapper .links__wrapper {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .board__component--desktop .board__wrapper .links__wrapper .article__card {
+    height: 215px;
+    display: block;
+    padding: 50px 30px;
+    color: white;
+    font: 700 18px 'Saira', sans-serif;
+  }
+  .board__component--desktop .board__wrapper .links__wrapper .article__card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+.container--code__explained {
+  max-width: 600px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}

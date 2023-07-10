@@ -1,0 +1,304 @@
+@font-face {
+  font-family: 'Saira';
+  font-style: italic;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memUYa2wxmKQyNkiV50dulWP7s95AqZTzZHcVdxWI9WH-pKBFIsxkw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memUYa2wxmKQyNkiV50dulWP7s95AqZTzZHcVdxWI9WH-pKBSosxkw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7wTCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA71rCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA773Fosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7_PFosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alfa Slab One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alfaslabone/v17/6NUQ8FmMKwSEKjnm5-4v-4Jh6dU.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs169vgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs18NvgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+body,
+p,
+h1,
+h2 {
+  margin: 0;
+}
+a {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+}
+.section__two-columns {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+@media screen and (min-width: 768px) {
+  .section__two-columns {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+  }
+}
+.section__four-columns {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+@media screen and (min-width: 768px) {
+  .section__four-columns {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+  }
+}
+body {
+  background-color: whitesmoke;
+}
+.page__header {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.page__header h1 {
+  padding-top: 32px;
+}
+.page__header h1 span {
+  display: block;
+  text-transform: uppercase;
+}
+.page__header h1 span:nth-child(1) {
+  font: 500 36px/36px 'Oswald', sans-serif;
+  letter-spacing: 0.9px;
+}
+.page__header h1 span:nth-child(2) {
+  font: 500 16px 'Oswald', sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .page__header h1 span:nth-child(1) {
+    font: 500 52px/46px 'Oswald', sans-serif;
+    letter-spacing: initial;
+  }
+  .page__header h1 span:nth-child(2) {
+    font: 500 22px 'Oswald', sans-serif;
+  }
+}
+.page__banner {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+.page__banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.page__banner .banner__contents {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  width: 100%;
+  padding: 0 30px;
+  text-align: center;
+  font: 400 26px/30px 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+.page__banner .banner__contents p:nth-child(2) {
+  margin-top: 12px;
+  font: 400 18px/25px 'Oswald', sans-serif;
+}
+.page__about .about__cover img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.page__about .about__contents {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.page__about .about__contents .tagline {
+  font: 400 16px 'Oswald', sans-serif;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.page__about .about__contents .title {
+  margin-bottom: 30px;
+  font: 700 46px 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+.page__about .about__contents .text {
+  margin-bottom: 30px;
+}
+.page__about .about__contents .text p {
+  font: 300 18px/30px 'Oswald', sans-serif;
+  margin-bottom: 10px;
+}
+.page__about .about__contents .button {
+  padding: 12px 20px;
+  border: 1px solid black;
+  font: 400 16px 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: black;
+  transition: all linear 0.15s;
+}
+.page__about .about__contents .button:hover {
+  color: white;
+  background-color: black;
+}
+.page__values {
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+.page__values .card {
+  background-color: white;
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.1);
+}
+.page__values .card .cover {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+}
+.page__values .card .title {
+  font: 500 22px 'Oswald', sans-serif;
+  text-transform: uppercase;
+  padding: 16px;
+}
+.page__values .card .text {
+  font: 300 18px/30px 'Oswald', sans-serif;
+  padding: 0 16px 16px 16px;
+}
+.page__contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url('../img/micael-saez-ArQP1OwlEs4-unsplash.jpg');
+  background-size: cover;
+}
+.page__contact .contact__contents {
+  max-width: 460px;
+  background-color: whitesmoke;
+  padding: 60px 30px;
+}
+.page__contact .contact__contents .tagline {
+  font: 400 16px 'Oswald', sans-serif;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.page__contact .contact__contents .title {
+  margin-bottom: 30px;
+  font: 700 46px 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+.page__contact .contact__contents .text {
+  margin-bottom: 30px;
+  font: 300 18px/30px 'Oswald', sans-serif;
+}
+.page__contact .contact__contents .button {
+  padding: 12px 20px;
+  border: 1px solid black;
+  font: 400 16px 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: black;
+  transition: all linear 0.15s;
+}
+.page__contact .contact__contents .button:hover {
+  color: white;
+  background-color: black;
+}
+.page__footer {
+  padding: 30px;
+  background-color: #A7C9E2;
+}
+.page__footer .text {
+  font: 500 14px/30px 'Oswald', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}

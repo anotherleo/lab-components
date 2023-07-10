@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="effect.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="heading">
+            <h1>Efeito de Máquina de Escrever</h1>
+            <p>Baseado no Elementor "Premium Addon Fancy Text".</p>
+        </header>
+        <section>
+            <div id="typewriter"></div>
+        </section>
+    </div>
+
+    <script src="typewriter-effect.js"></script>
+    <script>
+        const typewriter = new TypewriterEffect('typewriter', {
+            words: 'JAVASCRIPT;CONSTRUCTOR;FRONT-END;NEXT.JS',
+            typingDelay: 200,
+            deletingDelay: 100,
+            wordDelay: 1500
+        });
+        typewriter.type();
+    </script>
+</body>
+ 
+</html>

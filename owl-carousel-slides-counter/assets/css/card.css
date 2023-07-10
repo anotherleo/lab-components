@@ -1,0 +1,38 @@
+.card {
+  position: relative;
+  box-sizing: border-box;
+  padding: 16px 60px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 290px;
+  height: 400px;
+  border-radius: 20px;
+  background: radial-gradient(100% 225% at 100% 0%, #ff0000b0 0%, #000000 100%), linear-gradient(236deg, #00c3ff8c 0%, #000000 100%), linear-gradient(135deg, #558370 0%, #CDFFEB 36%, #009F9D 36%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+  background-blend-mode: overlay, hard-light, normal;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+}
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 16px 100px;
+    width: 460px;
+    height: 300px;
+  }
+}
+.card p {
+  margin: 0;
+}
+.card .discourse {
+  font-size: 400 16px 'Saira', sans-serif;
+  padding-bottom: 20px;
+}
+.card .name {
+  font: 700 14px 'Saira', sans-serif;
+}
+.card .job {
+  font: 300 14px 'Saira', sans-serif;
+}

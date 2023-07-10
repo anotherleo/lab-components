@@ -1,0 +1,400 @@
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7wTCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA71rCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA773Fosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7_PFosg.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  max-width: 983px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Saira', sans-serif;
+}
+body h1 {
+  font: 900 32px 'Saira', sans-serif;
+}
+body p {
+  margin: 0;
+}
+body footer {
+  padding: 30px;
+}
+body footer p {
+  font: 400 16px 'Saira', sans-serif;
+  text-align: center;
+}
+body footer .buy_me_a_coffee {
+  margin-top: 20px;
+}
+body footer .buy_me_a_coffee a {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all linear 0.15s;
+}
+body footer .buy_me_a_coffee a .profile {
+  width: 46px;
+  transition: all linear 0.15s;
+}
+body footer .buy_me_a_coffee a .coffee {
+  width: 160px;
+  display: flex;
+  transition: all linear 0.15s;
+}
+body footer .buy_me_a_coffee a .coffee .triangle {
+  margin-right: -2px;
+}
+body footer .buy_me_a_coffee a .coffee .button {
+  width: 100%;
+}
+body footer .buy_me_a_coffee a:hover .coffee {
+  transform: scale(1.1);
+}
+body footer .buy_me_a_coffee a:hover .profile {
+  transform: rotate(-10deg);
+}
+.clean__input {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+.clean__input::-webkit-inner-spin-button,
+.clean__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+input:focus-within,
+select:focus-within {
+  outline-color: rgba(0, 0, 0, 0.3);
+}
+.container-cart {
+  position: relative;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  width: calc(100% - 32px);
+  max-width: 983px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 24px;
+  background-color: #11357a;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+@media screen and (min-width: 768px) {
+  .container-cart {
+    width: 100%;
+  }
+}
+@keyframes animation--spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.product__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 0 16px;
+}
+@media screen and (min-width: 992px) {
+  .product__container {
+    flex-direction: row;
+    gap: 80px;
+    padding: 0;
+  }
+}
+.product__container .cover {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+.product__container .contents .tags {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  margin-bottom: 15px;
+}
+.product__container .contents .tags .category {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #11357a;
+  color: white;
+  font: 700 15px 'Saira', sans-serif;
+}
+.product__container .contents .tags .tag {
+  color: #11357a;
+  font: 700 15px 'Saira', sans-serif;
+}
+.product__container .contents .title {
+  color: #000f1e;
+  font: 900 36px/46px 'Saira', sans-serif;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .product__container .contents .title {
+    line-height: normal;
+    margin-bottom: 31px;
+  }
+}
+.product__container .contents .description {
+  color: #393c40;
+  font: 400 15px/25px 'Saira', sans-serif;
+  margin-bottom: 29px;
+}
+.product__container .contents form .cart__selectors {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  gap: 12px;
+}
+@media screen and (min-width: 768px) {
+  .product__container .contents form .cart__selectors {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.product__container .contents form .cart__selectors p {
+  color: #11357a;
+  font: 400 14px 'Saira', sans-serif;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.product__container .contents form .cart__selectors .quantity__controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .product__container .contents form .cart__selectors .quantity__controls {
+    margin-right: 56px;
+  }
+}
+.product__container .contents form .cart__selectors .quantity__controls input {
+  padding: 12px 20px;
+  width: 70px;
+  border-radius: 10px;
+  background-color: #e3e3e3;
+  font: 700 18px 'Saira', sans-serif;
+  border: 0;
+}
+.product__container .contents form .cart__selectors .quantity__controls .quantity__increase:hover,
+.product__container .contents form .cart__selectors .quantity__controls .quantity__decrease:hover {
+  cursor: pointer;
+}
+.product__container .contents form .cart__selectors .size__controls {
+  margin-right: 20px;
+}
+.product__container .contents form .cart__selectors .size__controls .selector__aesthetic {
+  position: relative;
+  width: fit-content;
+}
+.product__container .contents form .cart__selectors .size__controls .selector__aesthetic .selector__element {
+  appearance: none;
+  display: block;
+  width: 99px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: #e3e3e3;
+  font: 700 18px 'Saira', sans-serif;
+  border: 0;
+}
+.product__container .contents form .cart__selectors .size__controls .selector__aesthetic .aesthetic__arrow {
+  position: absolute;
+  z-index: 1;
+  right: 13px;
+  top: 11px;
+  transition: all linear 0.15s;
+  pointer-events: none;
+}
+.product__container .contents form .cart__selectors .size__controls .selector__aesthetic .aesthetic__arrow.is--open {
+  transform: rotate(-180deg);
+  top: 16px;
+}
+.product__container .contents form .cart__selectors .size__controls .selector__aesthetic:hover select,
+.product__container .contents form .cart__selectors .size__controls .selector__aesthetic:hover .aesthetic__arrow {
+  cursor: pointer;
+}
+.product__container .contents form .cart__selectors .color__controls {
+  position: relative;
+  display: inline-block;
+}
+.product__container .contents form .cart__selectors .color__controls .color__selected {
+  cursor: pointer;
+}
+.product__container .contents form .cart__selectors .color__controls .color__list {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 4px;
+  gap: 4px;
+  position: absolute;
+  top: 30px;
+  left: -4px;
+  list-style: none;
+  background-color: #e3e3e3;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.product__container .contents form .cart__selectors .color__controls .color__list.is--open {
+  display: grid;
+}
+.product__container .contents form .cart__selectors .color__controls .color__list li {
+  display: block;
+  text-align: center;
+  height: 46px;
+}
+.product__container .contents form .cart__selectors .color__controls .color__list li:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+.product__container .contents form .cart__selectors .color__controls .color__current {
+  width: 51px;
+  height: 51px;
+  border-radius: 10px;
+  background-color: #071734;
+}
+.product__container .contents form .add__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 30px;
+  padding: 18px 44px;
+  color: #fff;
+  font: 900 18px 'Saira', sans-serif;
+  background-color: #22b53f;
+  cursor: pointer;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all linear 0.15s;
+}
+.product__container .contents form .add__button:hover {
+  background-color: #27cf48;
+}
+.product__container .contents form .add__button .cart__loader {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border: 0;
+  transition: all linear 0.15s;
+}
+.product__container .contents form .add__button .cart__loader.is--loading {
+  width: 22px;
+  height: 22px;
+  border: 4px solid rgba(255, 255, 255, 0.45);
+  border-bottom: 4px solid white;
+  animation: animation--spin 1s linear infinite;
+}
+.button__cart {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  transition: all linear 0.15s;
+}
+.button__cart .cart__numbers {
+  position: absolute;
+  top: 5px;
+  right: -9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffd102;
+  font: 700 9px 'Saira', sans-serif;
+  color: #071734;
+  transition: all linear 0.15s;
+}
+.button__cart:hover {
+  background-color: #ffd102;
+}
+.button__cart:hover .cart__numbers {
+  background-color: white;
+}
+.toast__container {
+  position: relative;
+}
+.toast__container span {
+  opacity: 0;
+}
+.toast__container .toast {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  margin: 0;
+  padding: 6px 8px;
+  background-color: #000121cc;
+  color: #fff;
+  font: 400 12px 'Saira', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: all linear 3s;
+  opacity: 0;
+  animation: effect--fade_in 1.5s both;
+}
+@keyframes effect--fade_in {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-12px);
+  }
+}

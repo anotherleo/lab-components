@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7wTCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA71rCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA773Fosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7_PFosg.ttf) format('truetype');
+}
+body {
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Saira', sans-serif;
+}
+body h1 {
+  font: 900 32px 'Saira', sans-serif;
+}
+body p {
+  margin: 0;
+  font: 400 16px 'Saira', sans-serif;
+  text-align: center;
+}
+body .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.card__pattern--1 {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.35);
+}
+.card__pattern--1 .cover__wrapper {
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card__pattern--1 .cover__wrapper img {
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: all linear 0.2s;
+}
+.card__pattern--1 .cover__wrapper::after {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  content: "";
+  background-image: linear-gradient(to top, rgba(9, 4, 42, 0.897), rgba(176, 131, 139, 0.5));
+}
+.card__pattern--1 .tag {
+  z-index: 4;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 20px 0 20px;
+  background-color: #09042a;
+  color: whitesmoke;
+  padding: 6px 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  transition: all linear 0.2s;
+}
+.card__pattern--1 .content {
+  z-index: 3;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+}
+.card__pattern--1 .content svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  fill: white;
+  width: 100px;
+  height: 100px;
+  transition: all linear 0.2s;
+}
+.card__pattern--1 .content figcaption p {
+  color: white;
+}
+.card__pattern--1 .content figcaption p.title {
+  font-size: 26px;
+  font-weight: 700;
+}
+.card__pattern--2 {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.35);
+}
+.card__pattern--2 .cover__wrapper {
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card__pattern--2 .cover__wrapper img {
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: all linear 0.2s;
+}
+.card__pattern--2 .cover__wrapper::after {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  content: "";
+  background-image: linear-gradient(to top, rgba(9, 4, 42, 0.871), rgba(176, 131, 139, 0.5));
+}
+.card__pattern--2 .tag {
+  z-index: 4;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 20px 0 20px;
+  background-color: #09042a;
+  color: whitesmoke;
+  padding: 6px 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  transition: all linear 0.2s;
+}
+.card__pattern--2 .content {
+  z-index: 3;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+}
+.card__pattern--2 .content svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  fill: white;
+  width: 100px;
+  height: 100px;
+  transition: all linear 0.2s;
+}
+.card__pattern--2 .content figcaption p {
+  color: white;
+}
+.card__pattern--2 .content figcaption p.title {
+  font-size: 26px;
+  font-weight: 700;
+}
+.card__pattern--1:hover,
+.card__pattern--2:hover {
+  cursor: pointer;
+}
+.card__pattern--1:hover .cover,
+.card__pattern--2:hover .cover {
+  transform: scale(1.2);
+}
+.card__pattern--1:hover .tag,
+.card__pattern--2:hover .tag {
+  background-color: #b0838b;
+}
+.card__pattern--1:hover .content svg,
+.card__pattern--2:hover .content svg {
+  fill: pink;
+}

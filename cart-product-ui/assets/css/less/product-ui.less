@@ -1,0 +1,284 @@
+// out: false
+
+// * RESET -----------------------
+.clean__input {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+button {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+input,
+select {
+    &:focus-within {
+        outline-color: rgba(0,0,0,.3);
+    }
+}
+ 
+// * PRE-CODE -----------------------
+.container-cart {
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    width: calc(100% - 32px); 
+    max-width: 983px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 24px;
+    background-color: #11357a;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    @media screen and (min-width: 768px) {
+        width: 100%;
+    }
+}
+
+// * CODE ----------------------------
+
+@keyframes animation--spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.product__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 16px;
+
+    @media screen and (min-width: 992px) {
+        flex-direction: row;
+        gap: 80px;
+        padding: 0;
+    }
+
+    .cover {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+    }
+
+    .contents {
+        .tags {
+            display: flex;
+            align-items: center;
+            gap: 23px;
+            margin-bottom: 15px;
+            .category {
+                padding: 5px 10px;
+                border-radius: 5px;
+                background-color: #11357a;
+                color: white;
+                font: 700 15px @font;
+            }
+            .tag {
+                color: #11357a;
+                font: 700 15px @font;
+            }
+        }
+
+        .title {
+            color: #000f1e;
+            font: 900 36px/46px @font;
+            margin-bottom: 16px;
+            @media screen and (min-width: 768px) {
+                line-height: normal;
+                margin-bottom: 31px;
+            }
+        }
+
+        .description {
+            color: #393c40;
+            font: 400 15px/25px @font;
+            margin-bottom: 29px;
+        }
+
+        form {
+            .cart__selectors {
+                display: grid;
+                grid-template-columns: 60% 1fr;
+                gap: 12px;
+
+                @media screen and (min-width: 768px) {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+    
+                p {
+                    color: #11357a;
+                    font: 400 14px @font;
+                    letter-spacing: 1.4px;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+    
+                .quantity__controls {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    @media screen and (min-width: 768px) {
+                        margin-right: 56px;
+                    }
+    
+                    input {
+                        padding: 12px 20px;
+                        width: 70px;
+                        border-radius: 10px;
+                        background-color: #e3e3e3;
+                        font: 700 18px @font;
+                        border: 0;
+                    }
+    
+                    .quantity__increase,
+                    .quantity__decrease {
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+    
+                .size__controls {
+                    margin-right: 20px;
+    
+                    .selector__aesthetic {
+                        position: relative;
+                        width: fit-content;
+
+                        @media screen and (min-width: 768px) {
+                            
+                        }
+
+                        .selector__element {
+                            appearance: none;
+                            display: block;
+                            width: 99px;
+                            padding: 12px 20px;
+                            border-radius: 10px;
+                            background-color: #e3e3e3;
+                            font: 700 18px @font;
+                            border: 0;
+                        }
+                        .aesthetic__arrow {
+                            position: absolute;
+                            z-index: 1;
+                            right: 13px;
+                            top: 11px;
+                            transition: all linear .15s;
+                            pointer-events: none;
+                            &.is--open {
+                                transform: rotate(-180deg);
+                                top: 16px;
+                            }
+                        }
+                        &:hover {
+                            select,
+                            .aesthetic__arrow {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                .color__controls {
+                    position: relative;
+                    display: inline-block;
+
+                    .color__selected {
+                        cursor: pointer;
+                    }
+
+                    .color__list {
+                        display: none; // alternate to grid via JS
+                        grid-template-columns: 1fr 1fr 1fr;
+                        padding: 4px;
+                        gap: 4px;
+    
+                        position: absolute;
+                        top: 30px;
+                        left: -4px;
+                        list-style: none;
+                        background-color: #e3e3e3;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                        border-radius: 10px;
+
+                        &.is--open {
+                            display: grid;
+                        }
+
+                        li {
+                            display: block;
+                            text-align: center;
+                            height: 46px;
+                            &:hover {
+                                cursor: pointer;
+                                filter: brightness(110%);
+                            }
+                        }
+                    }
+                }
+    
+                .color__controls {
+                    .color__current {
+                        width: 51px;
+                        height: 51px;
+                        border-radius: 10px;
+                        background-color: #071734;
+                    }
+                }
+            }
+            .add__button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+
+                margin-top: 30px;
+                padding: 18px 44px;
+                color: #fff;
+                font: 900 18px @font;
+                background-color: #22b53f;
+                cursor: pointer;
+                border-radius: 10px;
+                text-transform: uppercase;
+                transition: all linear .15s;
+                &:hover {
+                    background-color: lighten(#22b53f, 6%);
+                }
+
+                .cart__loader {
+                    width: 0;
+                    height: 0;
+                    border-radius: 50%;
+                    border: 0;
+                    transition: all linear .15s;
+                    &.is--loading {
+                        width: 22px;
+                        height: 22px;
+                        border: 4px solid rgba(255,255,255,.45);
+                        border-bottom: 4px solid white;
+                        animation: animation--spin 1s linear infinite;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA7wTCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA71rCosg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/saira/v14/memWYa2wxmKQyPMrZX79wwYZQMhsyuShhKMjjbU9uXuA773Fosg.ttf) format('truetype');
+}
+body {
+  background: whitesmoke;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Saira', sans-serif;
+}
+body h1 {
+  font: 900 32px 'Saira', sans-serif;
+  text-align: center;
+}
+body p {
+  margin: 0;
+  font: 400 16px 'Saira', sans-serif;
+  text-align: center;
+}
+.container1200 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card {
+  padding: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 260px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #24483c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: 600px;
+  }
+}
+.owl-carousel.owl-theme.cards__carousel .owl-item {
+  display: flex;
+  justify-content: center;
+}
+.owl-carousel.owl-theme.cards__carousel .owl-dots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.owl-carousel.owl-theme.cards__carousel .owl-dots .owl-dot {
+  height: 10px !important;
+  display: flex;
+  align-items: center;
+}
+.owl-carousel.owl-theme.cards__carousel .owl-dots .owl-dot span {
+  margin: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #11357a;
+  transition: all linear 0.25s;
+}
+.owl-carousel.owl-theme.cards__carousel .owl-dots .owl-dot.active span {
+  width: 10px;
+  height: 10px;
+}
+.owl-carousel.owl-theme.cards__carousel .owl-dots.disabled {
+  display: none;
+}

@@ -1,0 +1,37 @@
+h1 {
+    padding-top: 100px;
+    font: 700 36px sans-serif;
+    text-align: center;
+}
+
+.button__pulse {
+    display: block;
+    cursor: pointer;
+
+    position: fixed;
+    right: calc(50% - 22px);
+    bottom: calc(50% - 22px);
+
+    border-radius: 50%;
+    background-color: #3a9209;
+    border: 1px solid #3a9209;
+    padding: 10px;
+    color: #ffffff;
+
+    animation: effect--pulse 1s infinite;
+}
+
+@keyframes effect--pulse {
+    0% {
+        background-color: #67f375;
+        border-width: 2px;
+        border-color: lime;
+    }
+
+    100% {
+        background-color: #4ab342;
+        border-width: 2px;
+        border-color: #fff;
+        transform: scale(1.2);
+    }
+}

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;700&display=swap');
+ 
+body {
+    background: whitesmoke;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: 'Saira', sans-serif;
+    h1 {
+        font: 900 32px 'Saira', sans-serif;
+        text-align: center;
+    }
+    p {
+        margin: 0;
+        font: 400 16px 'Saira', sans-serif;
+        text-align: center;
+    }
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        .container {
+            max-width: 360px;
+        }
+        .code {
+            padding: 0 16px;
+            max-width: 400px;
+            p {
+                text-align: left;
+            }
+        }
+    }
+    footer {
+        padding: 40px 0;
+    }
+}
+
+.animation--autoplay_bar {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-name: effect--reveal_right;
+}
+@keyframes effect--reveal_right {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+.owl-carousel.owl-theme.cards__carousel {
+    .owl-item {
+        &.active {
+            .item {
+                position: relative;
+                div {
+                    &::before {
+                        z-index: 6;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        content: "";
+                        margin-left: 8px;
+                        height: 6px;
+                        border-radius: 0 0 5px 5px;
+                        background-image: linear-gradient(to right,transparent,pink,pink,pink, transparent);
+                        .animation--autoplay_bar();
+                    }
+                }
+            }
+        }
+    }
+    .item {
+        margin: 16px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .owl-dots {
+        margin-top: 10px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .owl-dot {
+            span {
+                width: 26px;
+                height: 6px;
+                border-radius: 0;
+                background-color: darkslateblue;
+                transition: all linear .2s;
+                box-shadow: 0 0 6px rgba(255,255,255,.7);
+            }
+            &.active {
+                span {
+                    height: 14px;
+                    background-color: darkslateblue;
+                }
+            }
+        }
+    }
+}

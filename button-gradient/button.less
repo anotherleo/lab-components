@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    height: 100vh;
+    font-family: 'Saira', sans-serif;
+    a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font: 700 18px 'Saira', sans-serif;
+    }
+}
+.button__gradient {
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    display: block;
+    width: fit-content;
+    padding: 16px 36px;
+    
+    &::before {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, #0c3df4 10%, #02b5ff 45%, #02b5ff, #0c3df4);
+        width: 150%;
+        height: 100%;
+        content: "";
+        transition: all linear .25s;
+    }
+
+    &:hover {
+        &::before {
+            left: -50%;
+        }
+    }
+
+    &.gradient--2 {
+        &::before {
+            background: radial-gradient(100% 225% at 100% 0%, #FF0000 0%, #000000 100%), linear-gradient(236deg, #00C2FF 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 0%, #CDFFEB 36%, #009F9D 36%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+            background-blend-mode: overlay, hard-light, normal;
+        }
+    }
+
+    &.gradient--3 {
+        &::before {
+            background: linear-gradient(121deg, #FF0000 0%, #ff0000 100%), linear-gradient(140deg, #ff5454 27%, #223DCB 100%), linear-gradient(140deg, #4E9C51 0%, #001AFF 72%), linear-gradient(64deg, #6e00ff 0%, #0038FF 100%), radial-gradient(52% 101.79% at 50% 50%, #707300 0%, #ff0000 100%), radial-gradient(100% 100% at 70% 0%, #7A3B00 0%, #1DAC92 100%);
+            background-blend-mode: overlay, overlay, difference, difference, color-burn, exclusion;
+        }
+    }
+
+    &.gradient--4 {
+        &::before {
+            background: linear-gradient(301.28deg, #FFFFFF 51.74%, #1B00C0 100%), linear-gradient(121.28deg, #003077 0%, #88DBFF 100%), radial-gradient(100% 188.01% at 76.14% 0%, #43DDFF 0%, #FF0000 100%), linear-gradient(0deg, #DB00FF 0%, #14FF00 100%), radial-gradient(59.2% 100% at 50% 100%, #D50000 0%, #00B2FF 100%), radial-gradient(100% 148.07% at 0% 0%, #D50000 0%, #00FFFF 100%);
+            background-blend-mode: multiply, overlay, overlay, overlay, difference, normal;
+        }
+    }
+}

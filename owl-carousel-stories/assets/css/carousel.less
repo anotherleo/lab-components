@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+ 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: whitesmoke;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: 'Saira', sans-serif;
+    header {
+        h1 {
+            font: 900 32px 'Saira', sans-serif;
+            text-align: center;
+        }
+    }
+    footer {
+        p {
+            margin: 0;
+            font: 400 16px 'Saira', sans-serif;
+            text-align: center;
+        }
+    }
+}
+
+.container1200 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+    .carousel {
+        width: 340px;
+    }
+    .code {
+        width: 400px;
+    }
+}
+
+.carousel-slider-counter {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    .longline {
+        letter-spacing: -2px;
+    }
+}
+
+.storie__animation {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-name: effect--reveal_right;
+}
+@keyframes effect--reveal_right {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.owl-carousel.owl-theme.stories__carousel {
+    .owl-dots {
+        position: absolute;
+        margin: 3px;
+        left: 0;
+        top: 0;
+        width: calc(100% - 6px);
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        gap: 3px;
+        height: 10px;
+        .owl-dot {
+            position: relative;
+            flex-grow: 1;
+            background-color: rgba(255,255,255,.6);
+            display: block;
+            height: 100%;
+            width: 100%;
+            span {
+                width: 0;
+                height: 0;
+                margin: 0;    
+            }
+            &.active {
+                &::after {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 10px;
+                    content: "";
+                    background-color: white;
+                    .storie__animation();
+                }
+            }
+            &.storie__past {
+                background-color: white;
+            }
+            &.storie__next {
+                opacity: .7;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;700;900&display=swap');
+ 
+body {
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: 'Saira', sans-serif;
+    h1 {
+        font: 900 32px 'Saira', sans-serif;
+    }
+    p {
+        margin: 0;
+        font: 400 16px 'Saira', sans-serif;
+        text-align: center;
+    }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+
+.card__pattern--1 {
+    @width: 500px;
+    @height: 300px;
+    @radius: 20px;
+    @transition: all linear .2s;
+
+    position: relative;
+    width: @width;
+    height: @height;
+    border-radius: @radius;
+    box-shadow: 0 0 36px rgba(0,0,0,.35);
+    
+    .cover__wrapper {
+        width: @width;
+        height: @height;
+        border-radius: @radius;
+        overflow: hidden;
+        img {
+            width: @width;
+            height: @height;
+            border-radius: @radius;
+            object-fit: cover;
+            transition: @transition;
+        }
+        &::after {
+            z-index: 2;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: @width;
+            height: @height;
+            border-radius: @radius;
+            content: "";
+            background-image: linear-gradient(to top, rgba(9, 4, 42, 0.897), rgba(176, 131, 139, 0.5));
+        }
+    }
+
+    .tag {
+        z-index: 4;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0 @radius 0 @radius;
+        background-color: rgb(9, 4, 42);
+        color: whitesmoke;
+        padding: 6px 16px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 14px;
+        transition: @transition;
+    }
+    
+    .content {
+        z-index: 3;
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+
+        svg {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            fill: white;
+            width: 100px;
+            height: 100px;
+            transition: @transition;
+        }
+
+        figcaption {
+            p {
+                color: white;
+                &.title {
+                    font-size: 26px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.card__pattern--2 {
+    @width: 300px;
+    @height: 500px;
+    @radius: 20px;
+    @transition: all linear .2s;
+
+    position: relative;
+    width: @width;
+    height: @height;
+    border-radius: @radius;
+    box-shadow: 0 0 36px rgba(0,0,0,.35);
+    
+    .cover__wrapper {
+        width: @width;
+        height: @height;
+        border-radius: @radius;
+        overflow: hidden;
+        img {
+            width: @width;
+            height: @height;
+            border-radius: @radius;
+            object-fit: cover;
+            transition: @transition;
+        }
+        &::after {
+            z-index: 2;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: @width;
+            height: @height;
+            border-radius: @radius;
+            content: "";
+            background-image: linear-gradient(to top, rgba(9, 4, 42, 0.871), rgba(176, 131, 139, 0.5));
+        }
+    }
+
+    .tag {
+        z-index: 4;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0 @radius 0 @radius;
+        background-color: rgb(9, 4, 42);
+        color: whitesmoke;
+        padding: 6px 16px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 14px;
+        transition: @transition;
+    }
+    
+    .content {
+        z-index: 3;
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+
+        svg {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            fill: white;
+            width: 100px;
+            height: 100px;
+            transition: @transition;
+        }
+
+        figcaption {
+            p {
+                color: white;
+                &.title {
+                    font-size: 26px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.card__pattern--1,
+.card__pattern--2 {
+    &:hover {
+        cursor: pointer;
+        .cover {
+            transform: scale(1.2);
+        }
+        .tag {
+            background-color: rgb(176, 131, 139);
+        }
+        .content {
+            svg {
+                fill: pink;
+            }
+        }
+    }
+}

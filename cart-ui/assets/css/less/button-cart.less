@@ -1,0 +1,36 @@
+// out: false
+
+.button__cart {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    transition: all linear .15s;
+
+    .cart__numbers {
+        position: absolute;
+        top: 5px;
+        right: -9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #ffd102;
+        font: 700 9px @font;
+        color: #071734;
+        transition: all linear .15s;
+    }
+
+    &:hover {
+        background-color: #ffd102;
+        .cart__numbers {
+            background-color: white;
+        }
+    }
+}

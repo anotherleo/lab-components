@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/libs/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+
+    <link rel="stylesheet" href="assets/css/card.css">
+</head>
+
+<body>
+    <header>
+        <h1>Owl Carousel Slider Counter</h1>
+    </header>
+
+    <section class="container1200">
+        <div class="carousel">
+            <div class="owl-carousel owl-theme cards__carousel">
+                <div class="item">
+                    <div class="card">
+                        <p class="discourse">"O carrossel CSS é incrível! Deixou meu site muito mais dinâmico e atrativo."</p>
+                        <p class="name">Ana S.</p>
+                        <p class="job">Designer</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <p class="discourse">"Com o carrossel CSS, posso exibir várias imagens de forma elegante e profissional."</p>
+                        <p class="name">Carlos M.</p>
+                        <p class="job">Fotógrafo</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <p class="discourse">"A experiência do usuário melhorou muito após a implementação do carrossel CSS no meu site. Recomendo!"</p>
+                        <p class="name">Laura R.</p>
+                        <p class="job">UI/UX Designer</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <p class="discourse">"O carrossel CSS trouxe um toque moderno ao meu portfólio online. Agora posso exibir meus projetos de forma interativa."</p>
+                        <p class="name">Gustavo L.</p>
+                        <p class="job">Designer Gráfico</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <p class="discourse">Nunca pensei que um simples carrossel CSS pudesse transformar meu site em algo tão visualmente atraente. Estou impressionada!"</p>
+                        <p class="name">Sofia T.</p>
+                        <p class="job">Digital Marketer</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <p class="discourse">"O carrossel CSS é fácil de usar e personalizar. Ajudou a destacar os principais recursos do meu produto de forma cativante."</p>
+                        <p class="name">Marcelo P.</p>
+                        <p class="job">Social Media Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slider-counter">
+                <p>DEPOIMENTOS DE CLIENTES <span class="longline">&mdash;&mdash;&mdash;</span>&nbsp;
+                    <span id="slide-current"></span>
+                    &nbsp;/&nbsp;
+                    <span id="slide-max"></span>
+                </p>
+            </div>
+        </div>
+        <div class="code">
+            <h2>O código</h2>
+            <p> Fiz um código em JS que analiza o total de slides lendo a classe .owl-item e excluindo a classe .cloned (caso o loop esteja ativo). Usando a Mutation Observer API com a lib MutationSummary, fiz um observer para quando houver mudança no array de .owl-item, também exluindo o .cloned, que conte os .owl-item que estão acima da classe .active, detectando assim o número do slide atual.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>2023. Leo Thomas Monteiro.</p>
+        <p>LDNA S/A</p>
+    </footer>
+
+    <!-- * owl carousel controls -->
+    <script src="assets/libs/jquery-3.7.0.min.js"></script>
+    <script src="assets/libs/owl.carousel.min.js"></script>
+    <script src="assets/libs/mutation-summary.js"></script>
+    <script>
+        $('.cards__carousel').owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 2000,
+            loop: true,
+            nav: true,
+            dots: false,
+            navText: ["<img src='assets/img/caret-left-light.svg'>", "<img src='assets/img/caret-right-light.svg'>"],          
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 20,
+                }
+            }
+        });
+    </script>
+
+    <script>
+        const carousel = document.querySelector('.cards__carousel');
+
+        // maximum number
+        // use a filter, in case of using loop in owl carousel
+        const totalItems = document.querySelectorAll('.owl-item');
+        const filteredTotal = [...totalItems].filter(item => !item.classList.contains('cloned'));
+        const slidesTotal = filteredTotal.length;
+        const slideTotalDisplay = document.querySelector('#slide-max');
+        slideTotalDisplay.textContent = slidesTotal.toString();
+
+        // Function to count items above the active item
+        function countItemsAboveActive() {
+            const owlItems = document.querySelectorAll('.owl-item');
+            
+            // In case of loop option is true, we need to remove items with the class 'cloned' from the array
+            const filteredItems = [...owlItems].filter(item => !item.classList.contains('cloned'));
+
+            // control variable
+            let activeIndex = -1;
+
+            // Find the index of the active item
+            filteredItems.forEach((item, index) => {
+                if (item.classList.contains('active')) {
+                    activeIndex = index + 1;
+                }
+            });
+
+            // Count the number of items above the active item
+            // In case of using loop, the value could reach 0, so this is to prevent 0 to be printed
+            const itemsAboveCount = activeIndex > 0 ? activeIndex : 1;
+
+            // Print it in the screen
+            const slideCurrent = document.querySelector('#slide-current');
+            slideCurrent.textContent = itemsAboveCount;
+        }
+
+        // Select the parent element that contains .owl-item elements
+        const parentElement = document.querySelector('.owl-stage');
+
+        // Create a new MutationSummary instance
+        const observer = new MutationSummary({
+            rootNode: parentElement,
+            callback: countItemsAboveActive,
+            queries: [{ attribute: 'class' }],
+        });
+
+        // Trigger the initial count
+        countItemsAboveActive();
+    </script>
+</body>
+
+</html>
