@@ -116,3 +116,21 @@ body {
   box-shadow: 4px 4px 0 #2189CE, 8px 8px 0 #F81F72;
   color: #EF69A4;
 }
+.page__footer {
+  padding-top: 60px;
+}
+.page__footer p {
+  text-align: center;
+  font: 400 16px 'Barlow Condensed', sans-serif;
+  letter-spacing: 1px;
+  color: #f5f5f5;
+  padding-bottom: 36px;
+}
+.page__footer p a {
+  color: #FFF300;
+  text-decoration: none;
+  transition: all linear 0.15s;
+}
+.page__footer p a:hover {
+  color: #F81F72;
+}
