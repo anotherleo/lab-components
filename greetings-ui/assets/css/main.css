@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Ysabeau Office';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ysabeauoffice/v1/LDImapaZKhM9RuQIp8FmdYrPPNjFm07hbpKNlPPbh6MfYQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ysabeau Office';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ysabeauoffice/v1/LDImapaZKhM9RuQIp8FmdYrPPNjFm07hbpKNlPPbYKQfYQ.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+body {
+  font-family: 'Ysabeau Office', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+}
+body.background--day {
+  background-image: url('../img/day-1.png');
+}
+body.background--nightmare {
+  background-image: url('../img/night-2.png');
+}
+body.background--afternoon {
+  background-image: url('../img/day-2.png');
+}
+.container {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding: 80px 30px;
+  max-width: 340px;
+  min-height: 50vh;
+  border-radius: 30px;
+  backdrop-filter: blur(16px);
+  color: whitesmoke;
+  font-weight: 400;
+}
+.container h1 {
+  text-align: center;
+  font-weight: 700;
+}
