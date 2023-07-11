@@ -64,8 +64,25 @@ body {
   font: 500 22px 'Barlow Condensed', sans-serif;
   letter-spacing: 0.5px;
 }
+.page__tech {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.page__tech p {
+  color: #2189CE;
+  font: 400 24px 'Bangers', sans-serif;
+}
+.page__tech img {
+  height: 36px;
+}
 .page__projects {
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {

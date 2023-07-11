@@ -53,8 +53,29 @@ body {
     }
 }
 
+.page__tech {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    p {
+        color: @blue2;
+        font: 400 24px @fontB;
+    }
+
+    img {
+        height: 36px;
+    }
+}
+
 .page__projects {
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 60px;
     @media screen and (min-width: 768px) {
         padding-top: 100px;
